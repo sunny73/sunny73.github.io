@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-28T08:19:21.809Z</updated>
+  <updated>2018-10-29T06:35:50.289Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux基础</title>
+    <link href="http://yoursite.com/2018/10/29/linux%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yoursite.com/2018/10/29/linux基础/</id>
+    <published>2018-10-29T06:34:04.000Z</published>
+    <updated>2018-10-29T06:35:50.289Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;awk&quot;&gt;&lt;a href=&quot;#awk&quot; class=&quot;headerlink&quot; title=&quot;awk&quot;&gt;&lt;/a&gt;awk&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Linux awk 命令 | 菜鸟教程: &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>常用命令</title>
