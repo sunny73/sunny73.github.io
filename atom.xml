@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-29T06:59:59.726Z</updated>
+  <updated>2018-10-29T11:48:15.937Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python-install</title>
+    <link href="http://yoursite.com/2018/10/29/python-install/"/>
+    <id>http://yoursite.com/2018/10/29/python-install/</id>
+    <published>2018-10-29T11:36:23.000Z</published>
+    <updated>2018-10-29T11:48:15.937Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;python不同版本之间的命令行区别真心有点大,网上搜了一些文章感觉都讲的乱起八糟的&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>linux基础</title>
