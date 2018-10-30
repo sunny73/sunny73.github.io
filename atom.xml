@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-29T11:48:15.937Z</updated>
+  <updated>2018-10-30T01:33:17.989Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>matlab结构体</title>
+    <link href="http://yoursite.com/2018/10/30/matlab%E7%BB%93%E6%9E%84%E4%BD%93/"/>
+    <id>http://yoursite.com/2018/10/30/matlab结构体/</id>
+    <published>2018-10-30T01:24:49.000Z</published>
+    <updated>2018-10-30T01:33:17.989Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;﻿前言：&lt;/p&gt;
+&lt;p&gt;再做语音的实验时候遇到一个问题 ：需要给结构体预分配内存，然后我看了下就发现 其实完全就是动态增长的。我发现就算有报错，依然可以运行出结果。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="matlab" scheme="http://yoursite.com/categories/matlab/"/>
+    
+      <category term="实验" scheme="http://yoursite.com/categories/matlab/%E5%AE%9E%E9%AA%8C/"/>
+    
+    
+      <category term="matlab结构体" scheme="http://yoursite.com/tags/matlab%E7%BB%93%E6%9E%84%E4%BD%93/"/>
+    
+      <category term="语音学实验" scheme="http://yoursite.com/tags/%E8%AF%AD%E9%9F%B3%E5%AD%A6%E5%AE%9E%E9%AA%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>python-install</title>
