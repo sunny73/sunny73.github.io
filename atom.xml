@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-30T01:33:17.989Z</updated>
+  <updated>2018-10-30T12:21:54.263Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>语音学基础问题整理</title>
+    <link href="http://yoursite.com/2018/10/30/%E8%AF%AD%E9%9F%B3%E5%AD%A6%E5%9F%BA%E7%A1%80%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/"/>
+    <id>http://yoursite.com/2018/10/30/语音学基础问题整理/</id>
+    <published>2018-10-30T12:07:48.000Z</published>
+    <updated>2018-10-30T12:21:54.263Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前言:语音学中的一些基础问题 虽然基础  但是也是重难点 只能先将最棘手的问题解决了 再去系统的解决基础的问题了&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="信号处理" scheme="http://yoursite.com/categories/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/"/>
+    
+      <category term="语音学" scheme="http://yoursite.com/categories/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/%E8%AF%AD%E9%9F%B3%E5%AD%A6/"/>
+    
+    
+      <category term="信号处理" scheme="http://yoursite.com/tags/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/"/>
+    
+      <category term="语音学" scheme="http://yoursite.com/tags/%E8%AF%AD%E9%9F%B3%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mfcc</title>
+    <link href="http://yoursite.com/2018/10/30/mfcc/"/>
+    <id>http://yoursite.com/2018/10/30/mfcc/</id>
+    <published>2018-10-30T12:07:18.000Z</published>
+    <updated>2018-10-30T12:07:18.298Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>matlab结构体</title>
