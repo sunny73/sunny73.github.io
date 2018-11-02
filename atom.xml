@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-02T04:58:40.551Z</updated>
+  <updated>2018-11-02T05:12:47.205Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java-map</title>
+    <link href="http://yoursite.com/2018/11/02/Java-map/"/>
+    <id>http://yoursite.com/2018/11/02/Java-map/</id>
+    <published>2018-11-02T05:07:20.000Z</published>
+    <updated>2018-11-02T05:12:47.205Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前言：map 的重要性就不多说了，这里是一些必知必会的东西，尽管基础，好记性不如烂笔头&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Java基础" scheme="http://yoursite.com/categories/Java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="Java-map" scheme="http://yoursite.com/tags/Java-map/"/>
+    
+  </entry>
   
   <entry>
     <title>Java-分类统计</title>
