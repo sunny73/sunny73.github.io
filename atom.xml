@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-02T04:52:41.644Z</updated>
+  <updated>2018-11-02T04:58:08.990Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,23 +17,27 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Java-life</title>
+    <title>Java-分类统计</title>
     <link href="http://yoursite.com/2018/11/02/Java-life/"/>
     <id>http://yoursite.com/2018/11/02/Java-life/</id>
     <published>2018-11-02T04:34:18.000Z</published>
-    <updated>2018-11-02T04:52:41.644Z</updated>
+    <updated>2018-11-02T04:58:08.990Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;前言：朋友需要对日志中的报错信息进行分类统计，问题其实很简单，主要是数据很恶心，本来想用groub  by 但是有的报错信息是一类只是略有不同的那种，所以就需要用到子字符串匹配的思路了。&lt;/p&gt;
-&lt;p&gt;这是我写的一个小函数，重点的地方已经在注释中标注出来了&lt;/p&gt;
+      &lt;p&gt;前言：朋友需要对日志中的报错信息进行分类统计，问题其实很简单，主要是数据很恶心，本来想用groub  by 但是有的报错信息是一类只是略有不同的那种，所以就需要用到子字符串匹配的思路了。但是后来朋友采用的是python 的相似度的那种方式做的，这样可以避免手动寻找关键字了，而且存储的性能比较高，我很欣赏。&lt;/p&gt;
+&lt;p&gt;anyway ，自己写的一个子字符串小函数，重点的地方已经在注释中标注出来了&lt;/p&gt;
     
     </summary>
     
-      <category term="java常用小程序" scheme="http://yoursite.com/categories/java%E5%B8%B8%E7%94%A8%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="java实用小程序" scheme="http://yoursite.com/categories/java%E5%AE%9E%E7%94%A8%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
     
       <category term="java常用" scheme="http://yoursite.com/tags/java%E5%B8%B8%E7%94%A8/"/>
+    
+      <category term="字符串匹配" scheme="http://yoursite.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/"/>
+    
+      <category term="字符串统计" scheme="http://yoursite.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BB%9F%E8%AE%A1/"/>
     
   </entry>
   
