@@ -129,12 +129,17 @@
     <link href="http://yoursite.com/2018/10/30/mfcc/"/>
     <id>http://yoursite.com/2018/10/30/mfcc/</id>
     <published>2018-10-30T12:07:18.000Z</published>
-    <updated>2018-10-30T12:07:18.298Z</updated>
+    <updated>2018-11-03T13:11:12.564Z</updated>
     
     <summary type="html">
     
+      &lt;p&gt;mfcc 是语音学处理中最基础的框架&lt;/p&gt;
+&lt;p&gt;把书读薄，透过现象看mfcc的本质&lt;/p&gt;
+    
     </summary>
     
+    
+      <category term="语音学基础" scheme="http://yoursite.com/tags/%E8%AF%AD%E9%9F%B3%E5%AD%A6%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   

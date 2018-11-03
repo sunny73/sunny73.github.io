@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="语音学基础,">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="非淡泊无以明志，非宁静无以致远">
-<meta name="keywords" content="逆境 专注 时间">
+<meta name="description" content="mfcc 是语音学处理中最基础的框架 把书读薄，透过现象看mfcc的本质">
+<meta name="keywords" content="语音学基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mfcc">
 <meta property="og:url" content="http://yoursite.com/2018/10/30/mfcc/index.html">
 <meta property="og:site_name" content="Sunny">
-<meta property="og:description" content="非淡泊无以明志，非宁静无以致远">
+<meta property="og:description" content="mfcc 是语音学处理中最基础的框架 把书读薄，透过现象看mfcc的本质">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-30T12:07:18.298Z">
+<meta property="og:updated_time" content="2018-11-03T13:11:12.564Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mfcc">
-<meta name="twitter:description" content="非淡泊无以明志，非宁静无以致远">
+<meta name="twitter:description" content="mfcc 是语音学处理中最基础的框架 把书读薄，透过现象看mfcc的本质">
 
 
 
@@ -376,7 +376,20 @@
       
 
       
-        
+        <p>mfcc 是语音学处理中最基础的框架</p>
+<p>把书读薄，透过现象看mfcc的本质</p>
+<a id="more"></a>
+<h3 id="倒谱-mel系数-mfcc种的m："><a href="#倒谱-mel系数-mfcc种的m：" class="headerlink" title="倒谱=mel系数=mfcc种的m："></a>倒谱=mel系数=mfcc种的m：</h3><h4 id="倒谱系数"><a href="#倒谱系数" class="headerlink" title="倒谱系数"></a>倒谱系数</h4><p>发声系统=线性时变系统=声门（激励信号）<em>声道（冲激相应）<br>声道输出=激励信号</em>冲击响应</p>
+<p>语音信号处理：求声门激励序列和声道的冲激响应=解卷积</p>
+<p>如：求共振峰=求声门激励序列和声道的冲激响应</p>
+<p>倒谱系数=解卷积系统输出</p>
+<h4 id="解卷积系统："><a href="#解卷积系统：" class="headerlink" title="解卷积系统："></a>解卷积系统：</h4><p>​    原理<br>    时序序列in时域—》特征子系统+线性系统—–》复倒谱域<br>    z变换：<em>变+ 、+变+ 、加变加、×变</em></p>
+<h4 id="倒谱的作用"><a href="#倒谱的作用" class="headerlink" title="倒谱的作用"></a>倒谱的作用</h4><p>​      得到基频和共振峰<br>      消除语音中的混响和回声</p>
+<h4 id="Mel-频率倒谱系数分析"><a href="#Mel-频率倒谱系数分析" class="headerlink" title="Mel 频率倒谱系数分析"></a>Mel 频率倒谱系数分析</h4><h5 id="mel滤波带组"><a href="#mel滤波带组" class="headerlink" title="mel滤波带组"></a>mel滤波带组</h5><p>​    基于原理：1.人的主观感知频率 2.临界带</p>
+<p>mel滤波带组<br>就是几个三角形<br>频率-大小 坐标<br>下线频率 中心频率 上限频率 指的是三角形的几个点而已          </p>
+<h5 id="离散余弦变换："><a href="#离散余弦变换：" class="headerlink" title="离散余弦变换："></a>离散余弦变换：</h5><p>​    增强语音信号 采用了一个矩阵 我的理解是 针对噪声的一些特点 将一些地方 放大和缩小了</p>
+<h3 id="mfcc特征参数提取"><a href="#mfcc特征参数提取" class="headerlink" title="mfcc特征参数提取"></a>mfcc特征参数提取</h3><p>​    mel滤波+倒谱系数+离散余弦变换=mfcc参数</p>
+
       
     </div>
     
@@ -401,6 +414,12 @@
 
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/语音学基础/" rel="tag"><i class="fa fa-tag"></i> 语音学基础</a>
+          
+        </div>
       
 
       
@@ -480,8 +499,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -520,7 +548,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -550,6 +578,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#倒谱-mel系数-mfcc种的m："><span class="nav-number">1.</span> <span class="nav-text">倒谱=mel系数=mfcc种的m：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#倒谱系数"><span class="nav-number">1.1.</span> <span class="nav-text">倒谱系数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解卷积系统："><span class="nav-number">1.2.</span> <span class="nav-text">解卷积系统：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#倒谱的作用"><span class="nav-number">1.3.</span> <span class="nav-text">倒谱的作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mel-频率倒谱系数分析"><span class="nav-number">1.4.</span> <span class="nav-text">Mel 频率倒谱系数分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#mel滤波带组"><span class="nav-number">1.4.1.</span> <span class="nav-text">mel滤波带组</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#离散余弦变换："><span class="nav-number">1.4.2.</span> <span class="nav-text">离散余弦变换：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mfcc特征参数提取"><span class="nav-number">2.</span> <span class="nav-text">mfcc特征参数提取</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
