@@ -90,7 +90,7 @@
 <meta property="og:description" content="matlab 二维作图">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/11/04/matlab画图/subplot.png">
-<meta property="og:updated_time" content="2018-11-04T08:51:28.837Z">
+<meta property="og:updated_time" content="2018-11-04T14:51:26.627Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab画图">
 <meta name="twitter:description" content="matlab 二维作图">
@@ -419,6 +419,11 @@
 <h3 id="subplot"><a href="#subplot" class="headerlink" title="subplot"></a>subplot</h3><p>默认当前窗<br>行列的意义在于 第三个是横着放 还是竖着放</p>
 <p><img src="/2018/11/04/matlab画图/subplot.png" alt="subplot">           </p>
 <h3 id="绘制多条曲线"><a href="#绘制多条曲线" class="headerlink" title="绘制多条曲线"></a>绘制多条曲线</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">代码如下：                </span><br><span class="line">x=<span class="number">-10</span>:<span class="number">10</span>;            </span><br><span class="line">a=[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span>];         </span><br><span class="line">y1=a(<span class="number">1</span>)*x;y2=a(<span class="number">2</span>)*x;y3=a(<span class="number">3</span>)*x;y4=a(<span class="number">4</span>)*x;</span><br><span class="line"><span class="built_in">plot</span>(x,y1,<span class="string">'r-'</span>,x,y2,<span class="string">'b-'</span>,x,y3,<span class="string">'g-'</span>,x,y4,<span class="string">'m-'</span>);</span><br><span class="line">grid on;</span><br></pre></td></tr></table></figure>
+<h3 id="关于获取figure信息"><a href="#关于获取figure信息" class="headerlink" title="关于获取figure信息"></a>关于获取figure信息</h3><p>function - Get current figure size in MATLAB - Stack Overflow: </p>
+<p><a href="https://stackoverflow.com/questions/32726239/get-current-figure-size-in-matlab" target="_blank" rel="noopener">https://stackoverflow.com/questions/32726239/get-current-figure-size-in-matlab</a></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pos = get(gcf, <span class="string">'Position'</span>); <span class="comment">%// gives x left, y bottom, width, height</span></span><br><span class="line">width = pos(<span class="number">3</span>);</span><br><span class="line">height = pos(<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="设置figure-信息"><a href="#设置figure-信息" class="headerlink" title="设置figure 信息"></a>设置figure 信息</h3><p>C:\pctexv4...\Position.DVI:</p>
+<p> <a href="http://www.cs.cornell.edu/courses/cs100m/2007fa/Graphics/Position.pdf" target="_blank" rel="noopener">http://www.cs.cornell.edu/courses/cs100m/2007fa/Graphics/Position.pdf</a></p>
 
       
     </div>
@@ -616,7 +621,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#figure"><span class="nav-number">1.</span> <span class="nav-text">figure</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#subplot"><span class="nav-number">2.</span> <span class="nav-text">subplot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制多条曲线"><span class="nav-number">3.</span> <span class="nav-text">绘制多条曲线</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#figure"><span class="nav-number">1.</span> <span class="nav-text">figure</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#subplot"><span class="nav-number">2.</span> <span class="nav-text">subplot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制多条曲线"><span class="nav-number">3.</span> <span class="nav-text">绘制多条曲线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于获取figure信息"><span class="nav-number">4.</span> <span class="nav-text">关于获取figure信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置figure-信息"><span class="nav-number">5.</span> <span class="nav-text">设置figure 信息</span></a></li></ol></div>
             
 
           </div>
