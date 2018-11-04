@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-04T08:45:02.337Z</updated>
+  <updated>2018-11-04T08:51:28.837Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,40 +18,25 @@
   
   <entry>
     <title>matlab画图</title>
-    <link href="http://yoursite.com/2018/11/04/matlab%E7%94%BB%E5%9B%BE-1/"/>
-    <id>http://yoursite.com/2018/11/04/matlab画图-1/</id>
-    <published>2018-11-04T08:45:02.000Z</published>
-    <updated>2018-11-04T08:45:02.337Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
     <link href="http://yoursite.com/2018/11/04/matlab%E7%94%BB%E5%9B%BE/"/>
     <id>http://yoursite.com/2018/11/04/matlab画图/</id>
-    <published>2018-11-04T08:20:11.547Z</published>
-    <updated>2018-11-04T08:44:54.972Z</updated>
+    <published>2018-11-04T08:20:11.000Z</published>
+    <updated>2018-11-04T08:51:28.837Z</updated>
     
     <summary type="html">
     
-      &lt;hr&gt;
-&lt;p&gt;layout: hello-world&lt;br&gt;title: matlab画图&lt;br&gt;date: 2018-11-04 16:20:11&lt;br&gt;tags: &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;matlab二维图&lt;/li&gt;
-&lt;li&gt;语音学实验&lt;br&gt; categories: &lt;/li&gt;
-&lt;li&gt;matlab &lt;/li&gt;
-&lt;li&gt;实验 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;matlab 二维作图&lt;/p&gt;
+      &lt;p&gt;matlab 二维作图&lt;/p&gt;
     
     </summary>
     
+      <category term="matlab" scheme="http://yoursite.com/categories/matlab/"/>
+    
+      <category term="实验" scheme="http://yoursite.com/categories/matlab/%E5%AE%9E%E9%AA%8C/"/>
+    
+    
+      <category term="matlab二维图" scheme="http://yoursite.com/tags/matlab%E4%BA%8C%E7%BB%B4%E5%9B%BE/"/>
+    
+      <category term="语音学实验" scheme="http://yoursite.com/tags/%E8%AF%AD%E9%9F%B3%E5%AD%A6%E5%AE%9E%E9%AA%8C/"/>
     
   </entry>
   
@@ -60,12 +45,24 @@
     <link href="http://yoursite.com/2018/11/04/%E7%AB%AF%E7%82%B9%E6%A3%80%E6%B5%8B/"/>
     <id>http://yoursite.com/2018/11/04/端点检测/</id>
     <published>2018-11-04T08:19:04.000Z</published>
-    <updated>2018-11-04T08:19:05.004Z</updated>
+    <updated>2018-11-04T08:52:15.602Z</updated>
     
     <summary type="html">
     
+      &lt;p&gt;端点检测中遇到的一些问题&lt;/p&gt;
+    
     </summary>
     
+      <category term="matlab" scheme="http://yoursite.com/categories/matlab/"/>
+    
+      <category term="实验" scheme="http://yoursite.com/categories/matlab/%E5%AE%9E%E9%AA%8C/"/>
+    
+    
+      <category term="matlab" scheme="http://yoursite.com/tags/matlab/"/>
+    
+      <category term="插值" scheme="http://yoursite.com/tags/%E6%8F%92%E5%80%BC/"/>
+    
+      <category term="短时能量" scheme="http://yoursite.com/tags/%E7%9F%AD%E6%97%B6%E8%83%BD%E9%87%8F/"/>
     
   </entry>
   
@@ -244,9 +241,9 @@
       <category term="实验" scheme="http://yoursite.com/categories/matlab/%E5%AE%9E%E9%AA%8C/"/>
     
     
-      <category term="matlab结构体" scheme="http://yoursite.com/tags/matlab%E7%BB%93%E6%9E%84%E4%BD%93/"/>
-    
       <category term="语音学实验" scheme="http://yoursite.com/tags/%E8%AF%AD%E9%9F%B3%E5%AD%A6%E5%AE%9E%E9%AA%8C/"/>
+    
+      <category term="matlab结构体" scheme="http://yoursite.com/tags/matlab%E7%BB%93%E6%9E%84%E4%BD%93/"/>
     
   </entry>
   
