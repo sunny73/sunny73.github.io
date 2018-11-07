@@ -39,7 +39,7 @@
     <link href="http://yoursite.com/2018/11/07/dtw%E7%AE%97%E6%B3%95/"/>
     <id>http://yoursite.com/2018/11/07/dtw算法/</id>
     <published>2018-11-07T08:31:41.000Z</published>
-    <updated>2018-11-07T09:04:45.452Z</updated>
+    <updated>2018-11-07T09:08:40.937Z</updated>
     
     <summary type="html">
     
@@ -48,7 +48,9 @@
     
     </summary>
     
-      <category term="matlab 实验" scheme="http://yoursite.com/categories/matlab-%E5%AE%9E%E9%AA%8C/"/>
+      <category term="matlab" scheme="http://yoursite.com/categories/matlab/"/>
+    
+      <category term="实验" scheme="http://yoursite.com/categories/matlab/%E5%AE%9E%E9%AA%8C/"/>
     
     
       <category term="matlab" scheme="http://yoursite.com/tags/matlab/"/>
