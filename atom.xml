@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-04T14:51:26.627Z</updated>
+  <updated>2018-11-07T08:57:38.266Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,65 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>质心最邻近算法</title>
+    <link href="http://yoursite.com/2018/11/07/%E8%B4%A8%E5%BF%83%E6%9C%80%E9%82%BB%E8%BF%91%E7%AE%97%E6%B3%95/"/>
+    <id>http://yoursite.com/2018/11/07/质心最邻近算法/</id>
+    <published>2018-11-07T08:49:26.000Z</published>
+    <updated>2018-11-07T08:57:38.266Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="matlab" scheme="http://yoursite.com/categories/matlab/"/>
+    
+    
+      <category term="matlab" scheme="http://yoursite.com/tags/matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>dtw算法</title>
+    <link href="http://yoursite.com/2018/11/07/dtw%E7%AE%97%E6%B3%95/"/>
+    <id>http://yoursite.com/2018/11/07/dtw算法/</id>
+    <published>2018-11-07T08:31:41.000Z</published>
+    <updated>2018-11-07T09:02:58.296Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;前言：我对动态时间规整算法的一些理解,注matlab 已经是实现了dtw的算法&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/rs_network/article/details/8540307&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="matlab 实验" scheme="http://yoursite.com/categories/matlab-%E5%AE%9E%E9%AA%8C/"/>
+    
+    
+      <category term="matlab" scheme="http://yoursite.com/tags/matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux上安装oracle数据库</title>
+    <link href="http://yoursite.com/2018/11/07/linux%E4%B8%8A%E5%AE%89%E8%A3%85oracle%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>http://yoursite.com/2018/11/07/linux上安装oracle数据库/</id>
+    <published>2018-11-07T07:28:50.000Z</published>
+    <updated>2018-11-07T07:28:50.359Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>matlab画图</title>
