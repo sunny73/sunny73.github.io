@@ -39,18 +39,12 @@
     <link href="http://yoursite.com/2018/11/07/dtw%E7%AE%97%E6%B3%95/"/>
     <id>http://yoursite.com/2018/11/07/dtw算法/</id>
     <published>2018-11-07T08:31:41.000Z</published>
-    <updated>2018-11-07T09:02:58.296Z</updated>
+    <updated>2018-11-07T09:04:45.452Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;前言：我对动态时间规整算法的一些理解,注matlab 已经是实现了dtw的算法&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/rs_network/article/details/8540307&quot; target=&quot;_blank&quot;
-        
-      
+      &lt;p&gt;前言：我对动态时间规整算法的一些理解,注matlab 已经是实现了dtw的算法&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/rs_network/article/details/8540307&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/rs_network/article/details/8540307&lt;/a&gt;  DTW算法（语音识别）&lt;/p&gt;
     
     </summary>
     
