@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="非淡泊无以明志，非宁静无以致远">
+<meta name="description" content="本文作者孙佳鑫，特此收录。孙: 最近在阿里云上买了个轻量级服务器，centos7.3版本，在装oracle11g并实现Navicat远连的时候出现了很多bug，在网上搜的时候发现没有一篇博客是可以完全适用的，所以把这些过程整理出来，希望能帮助后面的同学少走弯路。">
 <meta name="keywords" content="逆境 专注 时间">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux上安装oracle数据库">
 <meta property="og:url" content="http://yoursite.com/2018/11/07/linux上安装oracle数据库/index.html">
 <meta property="og:site_name" content="Sunny">
-<meta property="og:description" content="非淡泊无以明志，非宁静无以致远">
+<meta property="og:description" content="本文作者孙佳鑫，特此收录。孙: 最近在阿里云上买了个轻量级服务器，centos7.3版本，在装oracle11g并实现Navicat远连的时候出现了很多bug，在网上搜的时候发现没有一篇博客是可以完全适用的，所以把这些过程整理出来，希望能帮助后面的同学少走弯路。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-07T07:28:50.359Z">
+<meta property="og:updated_time" content="2018-11-07T14:45:26.219Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux上安装oracle数据库">
-<meta name="twitter:description" content="非淡泊无以明志，非宁静无以致远">
+<meta name="twitter:description" content="本文作者孙佳鑫，特此收录。孙: 最近在阿里云上买了个轻量级服务器，centos7.3版本，在装oracle11g并实现Navicat远连的时候出现了很多bug，在网上搜的时候发现没有一篇博客是可以完全适用的，所以把这些过程整理出来，希望能帮助后面的同学少走弯路。">
 
 
 
@@ -376,7 +376,278 @@
       
 
       
-        
+        <p>本文作者孙佳鑫，特此收录。<br>孙: 最近在阿里云上买了个轻量级服务器，centos7.3版本，在装oracle11g并实现Navicat远连的时候出现了很多bug，在网上搜的时候发现没有一篇博客是可以完全适用的，所以把这些过程整理出来，希望能帮助后面的同学少走弯路。</p>
+<a id="more"></a>
+<ol>
+<li>建立swap分区</li>
+</ol>
+<blockquote>
+<p>命令1：dd if=/dev/zero of=/home/swapbs=1024 count=2097152</p>
+<p>命令2：mkswap  /home/swap</p>
+<p>命令3：swapon  /home/swap</p>
+</blockquote>
+<p>查看分区情况，若有Swap分区则为正确</p>
+<blockquote>
+<p>命令4：free -m</p>
+<p>命令5：vim /etc/fstab</p>
+</blockquote>
+<p>添加一行</p>
+<blockquote>
+<p>/home/swap            swap          swap    defaults        0 0</p>
+</blockquote>
+<p>否则重启后swap分区会失效</p>
+<ol start="2">
+<li>创建用户和用户组</li>
+</ol>
+<blockquote>
+<p>命令1：groupadd oinstall</p>
+<p>命令2：groupadd dba</p>
+<p>命令3：useradd -g oinstall -G dba -moracle</p>
+<p>命令4：groups oracle</p>
+<p>命令5：passwd oracle</p>
+<p>命令6：id oracle</p>
+</blockquote>
+<ol start="3">
+<li>创建安装目录和权限</li>
+</ol>
+<blockquote>
+<p>命令1：mkdir -p /data/oracle</p>
+<p>命令2：mkdir -p /data/oraInventory</p>
+<p>命令3：mkdir -p /data/database</p>
+<p>命令4：cd /data</p>
+<p>命令5：chown -R oracle:oinstall/data/oracle</p>
+<p>命令6：chown -R oracle:oinstall/data/oraInventory</p>
+<p>命令7：chown -R oracle:oinstall/data/database</p>
+</blockquote>
+<ol start="4">
+<li>修改OS系统标识</li>
+</ol>
+<blockquote>
+<p>命令1：vim /etc/redhat-release</p>
+</blockquote>
+<p>修改为redhat-7</p>
+<ol start="5">
+<li><p>关闭防火墙和selinux（阿里云中已经关闭）</p>
+</li>
+<li><p>修改内核参数</p>
+</li>
+</ol>
+<blockquote>
+<p>命令1：vim /etc/sysctl.conf</p>
+</blockquote>
+<p>增加如下内容：</p>
+<p>net.ipv4.icmp_echo_ignore_broadcasts= 1</p>
+<p>net.ipv4.conf.all.rp_filter = 1</p>
+<p>#设置最大打开文件数</p>
+<p>fs.file-max = 6815744</p>
+<p>fs.aio-max-nr = 1048576</p>
+<p>#共享内存的总量，8G内存设置：2097152*4k/1024/1024</p>
+<p>kernel.shmall = 2097152</p>
+<p>#最大共享内存的段大小</p>
+<p>kernel.shmmax = 2147483648</p>
+<p>#整个系统共享内存端的最大数</p>
+<p>kernel.shmmni = 4096</p>
+<p>kernel.sem = 250 32000 100 128</p>
+<p>#可使用的IPv4端口范围</p>
+<p>net.ipv4.ip_local_port_range = 900065500</p>
+<p>net.core.rmem_default = 262144</p>
+<p>net.core.rmem_max= 4194304</p>
+<p>net.core.wmem_default= 262144</p>
+<p>net.core.wmem_max= 1048576</p>
+<p>​       命令2：sysctl -p</p>
+<p>​       使文件生效</p>
+<p>​       命令3：vim /etc/security/limits.conf</p>
+<p>​       增加如下内容：</p>
+<p>​       oraclesoft nproc 2047</p>
+<p>oracle hard nproc 16384</p>
+<p>oracle soft nofile 1024</p>
+<p>oracle hard nofile 65536</p>
+<ol start="7">
+<li>配置oracle用户的环境变量</li>
+</ol>
+<p>命令1：vim /home/oracle/.bash_profile</p>
+<p>增加如下内容</p>
+<p>export ORACLE_BASE=/data/oracle</p>
+<p>exportORACLE_HOME=$ORACLE_BASE/product/11.2.0/db_1</p>
+<p>#oracle启动数据库实例名</p>
+<p>export ORACLE_SID=orcl11g</p>
+<p>#添加系统环境变量</p>
+<p>export PATH=$ORACLE_HOME/bin:/usr/sbin:$PATH</p>
+<p>exportLD_LIBRARY_PATH=$ORACLE_HOME/lib:/usr/lib</p>
+<p>exportTNS_ADMIN=$ORACLE_HOME/network/admin/samples</p>
+<ol start="8">
+<li>安装需要的rpm包</li>
+</ol>
+<p>命令1：yum -y install gcc gcc-c++ makebinutils compat-libstdc++-33 glibc glibc-devel libaio libaio-devel libgcclibstdc++ libstdc++-devel libXtst sysstat ksh make libXi compat-libcap1</p>
+<ol start="9">
+<li>解压两个安装文件到对应的文件夹下</li>
+</ol>
+<p>命令1：yum -y install zip unzip</p>
+<p>命令2：unzip/opt/soft/linux.x64_11gR2_database_1of2.zip -d /data/database/</p>
+<p>命令3：unzip/opt/soft/linux.x64_11gR2_database_2of2.zip -d /data/database/</p>
+<ol start="10">
+<li>修改安装配置信息</li>
+</ol>
+<p>命令1：vim/data/database/database/response/db_install.rsp</p>
+<p>修改信息为</p>
+<p><a href="https://blog.csdn.net/sinat_32998977/article/details/79437014" target="_blank" rel="noopener">https://blog.csdn.net/sinat_32998977/article/details/79437014</a></p>
+<p>中的第10步</p>
+<ol start="11">
+<li>进行安装</li>
+</ol>
+<p>命令1：su - oracle</p>
+<p>命令2：cd /data/database/database</p>
+<p>命令3：./runInstaller -silent-ignorePrereq -ignoreSysPrereqs -responseFile/data/database/database/response/db_install.rsp</p>
+<ol start="12">
+<li>另开一个终端使用root用户运行</li>
+</ol>
+<p>命令1：/data/oraInventory/orainstRoot.sh</p>
+<p>命令2：/data/oracle/product/11.2.0/db_1/root.sh</p>
+<p>执行完后第11步的终端界面会出现Successfully SetupSoftware，按回车即可</p>
+<ol start="13">
+<li>配置tnsnames.ora</li>
+</ol>
+<p>命令1：vim/data/oracle/product/11.2.0/db_1/network/admin/samples/tnsnames.ora</p>
+<p>添加如下内容：</p>
+<p>alioracle =  </p>
+<p>​     (DESCRIPTION =   </p>
+<p>​        (ADDRESS_LIST =   </p>
+<p>​            (ADDRESS = (PROTOCOL = TCP)(HOST =0.0.0.0)(PORT = 1521))   </p>
+<p>​        )   </p>
+<p>​        (CONNECT_DATA =   </p>
+<p>​            (SERVICE_NAME = orcl)   </p>
+<p>​        )   </p>
+<p>)</p>
+<ol start="14">
+<li>建库</li>
+</ol>
+<p>命令1：cd /data/oracle/product/11.2.0/db_1/bin</p>
+<p>命令2：./dbca -silent -responseFile/data/database/database/response/dbca.rsp</p>
+<p>这个时候xshell中会清屏，全是黑的，不要慌，随便输入点东西，回车，再随便输入点东西，在回车，就开始建库了</p>
+<ol start="15">
+<li>配置listener.ora</li>
+</ol>
+<p>命令1：vim/data/oracle/product/11.2.0/db_1/network/admin/samples/listener.ora</p>
+<p>添加以下内容：</p>
+<p>LISTENER=(DESCRIPTION_LIST=(DESCRIPTION=</p>
+<p>​      (ADDRESS=(PROTOCOL=TCP)(HOST=0.0.0.0)(PORT=1521))  </p>
+<p>  )</p>
+<p>)</p>
+<p>SID_LIST_LISTENER=</p>
+<p> (SID_LIST= </p>
+<p>​        (SID_DESC= </p>
+<p>​               (GLOBAL_DBNAME=orcl) </p>
+<p>​               (SID_NAME=orcl11g) </p>
+<p>​               (ORACLE_HOME=/data/oracle/product/11.2.0/db_1)</p>
+<p>​                (PRESPAWN_MAX=20) </p>
+<p>​                (PRESPAWN_LIST= </p>
+<p>​                (PRESPAWN_DESC=(PROTOCOL=tcp)(POOL_SIZE=2)(TIMEOUT=1))</p>
+<p>​        )</p>
+<p> )</p>
+<p>)</p>
+<ol start="16">
+<li><p>去阿里云控制台，找到安全组，去添加1521端口的配置规则，否则用公网ip连接不到oracle数据库,这一步很关键，否则无法用公网ip远程连接。</p>
+</li>
+<li><p>开启监听</p>
+</li>
+</ol>
+<p>命令1：lsnrctl start</p>
+<p>命令1：lsnrctl stop</p>
+<p>命令1：lsnrctl status</p>
+<p>开启后可在Windows命令行界面中使用telnet 公网ip 1521来测试网络是否连通</p>
+<ol start="18">
+<li>登录sqlplus，查看实例状态</li>
+</ol>
+<p>命令1：sqlplus / as sysdba</p>
+<p>激活scott用户</p>
+<p>命令2：alter user scott accountunlock;</p>
+<p>命令3：alter user scott identified by Tcc123456;</p>
+<ol start="19">
+<li>安装并激活Navicat for Oracle</li>
+</ol>
+<p>下载链接：<a href="http://pan.baidu.com/s/1pKJGgVh" target="_blank" rel="noopener">http://pan.baidu.com/s/1pKJGgVh</a> 密码：2c06</p>
+<p><a href="https://blog.csdn.net/endlessseaofcrow/article/details/78226837" target="_blank" rel="noopener">https://blog.csdn.net/endlessseaofcrow/article/details/78226837</a></p>
+<p>此时已经可以通过Navicat远程连接oracle数据库了</p>
+<ol start="20">
+<li>修改Oracle开机启动文件</li>
+</ol>
+<p>命令1：vim /data/oracle/product/11.2.0/db_1/bin/dbstart</p>
+<p>把ORACLE_HOME_LISTNER=$1</p>
+<p>改成ORACLE_HOME_LISTNER=/data/oracle/product/11.2.0/db_1</p>
+<p>命令2：vim/data/oracle/product/11.2.0/db_1/bin/dbshut</p>
+<p>把ORACLE_HOME_LISTNER=$1</p>
+<p>改成ORACLE_HOME_LISTNER=/data/oracle/product/11.2.0/db_1</p>
+<p>命令3：vim /etc/oratab</p>
+<p>把orcl11g:/data/oracle/product/11.2.0/db_1:N</p>
+<p>改为orcl11g:/data/oracle/product/11.2.0/db_1:Y</p>
+<p>命令4：vim /etc/rc.d/init.d/oracle</p>
+<p>写入以下内容</p>
+<p>#! /bin/bash</p>
+<p># oracle: Start/Stop Oracle Database11g R2</p>
+<p>#</p>
+<p># chkconfig: 345 90 10</p>
+<p># description: The Oracle Databaseis an Object-Relational Database Management System.</p>
+<p>#</p>
+<p># processname: oracle</p>
+<p>. /etc/rc.d/init.d/functions</p>
+<p>LOCKFILE=/var/lock/subsys/oracle</p>
+<p>ORACLE_HOME=/data/oracle/product/11.2.0/db_1</p>
+<p>ORACLE_USER=oracle</p>
+<p>case “$1” in</p>
+<p>‘start’)</p>
+<p>  if [ -f $LOCKFILE ]; then</p>
+<p>​     echo $0 already running.</p>
+<p>​     exit 1</p>
+<p>  fi</p>
+<p>  echo -n $”Starting Oracle Database:”</p>
+<p>  su - $ORACLE_USER -c “$ORACLE_HOME/bin/lsnrctl start”</p>
+<p>  su - $ORACLE_USER -c “$ORACLE_HOME/bin/dbstart $ORACLE_HOME”</p>
+<p>  su - $ORACLE_USER -c “$ORACLE_HOME/bin/emctl start dbconsole”</p>
+<p>  touch $LOCKFILE</p>
+<p>  ;;</p>
+<p>‘stop’)</p>
+<p>  if [ ! -f $LOCKFILE ]; then</p>
+<p>​     echo $0 already stopping.</p>
+<p>​     exit 1</p>
+<p>  fi</p>
+<p>  echo -n $”Stopping Oracle Database:”</p>
+<p>  su - $ORACLE_USER -c “$ORACLE_HOME/bin/lsnrctl stop”</p>
+<p>  su - $ORACLE_USER -c “$ORACLE_HOME/bin/dbshut”</p>
+<p>  su - $ORACLE_USER -c “$ORACLE_HOME/bin/emctl stop dbconsole”</p>
+<p>  rm -f $LOCKFILE</p>
+<p>  ;;</p>
+<p>‘restart’)</p>
+<p>  $0 stop</p>
+<p>  $0 start</p>
+<p>  ;;</p>
+<p>‘status’)</p>
+<p>  if [ -f $LOCKFILE ]; then</p>
+<p>​     echo $0 started.</p>
+<p>​     else</p>
+<p>​     echo $0 stopped.</p>
+<p>  fi</p>
+<p>  ;;</p>
+<p>*)</p>
+<p>  echo “Usage: $0 [start|stop|status]”</p>
+<p>  exit 1</p>
+<p>esac</p>
+<p>exit 0</p>
+<ol start="21">
+<li>设置Oracle开机启动</li>
+</ol>
+<p>命令1：systemctl enable oracle</p>
+<p>命令2：cd /data/oracle/product/11.2.0/db_1/bin/</p>
+<p>命令3：chmod 6751 oracle</p>
+<p>命令4：cd /var/tmp</p>
+<p>命令5：chown -R oracle:oinstall.oracle</p>
+<ol start="22">
+<li>系统重启后需要执行的操作</li>
+</ol>
+<p>命令1：su - oracle</p>
+<p>命令2：lsnrctl start</p>
+<p>命令3：sqlplus / as sysdba</p>
+<p>并在SQL中执行startup即可，此时已经可以用Navicat远连了。</p>
+
       
     </div>
     
