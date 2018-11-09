@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="matlab结构体,语音学实验,">
+  <meta name="keywords" content="matlab,">
 
 
 
@@ -81,18 +81,20 @@
 
 
 
-<meta name="description" content="前言： 再做语音的实验时候遇到一个问题 ：需要给结构体预分配内存，然后我看了下就发现 其实完全就是动态增长的。我发现就算有报错，依然可以运行出结果。">
-<meta name="keywords" content="matlab结构体,语音学实验">
+<meta name="description" content="前言：互相关系数的一些points">
+<meta name="keywords" content="matlab">
 <meta property="og:type" content="article">
-<meta property="og:title" content="matlab结构体">
-<meta property="og:url" content="http://yoursite.com/2018/10/30/matlab结构体/index.html">
+<meta property="og:title" content="互相关系数">
+<meta property="og:url" content="http://yoursite.com/2018/11/09/互相关系数/index.html">
 <meta property="og:site_name" content="Sunny">
-<meta property="og:description" content="前言： 再做语音的实验时候遇到一个问题 ：需要给结构体预分配内存，然后我看了下就发现 其实完全就是动态增长的。我发现就算有报错，依然可以运行出结果。">
+<meta property="og:description" content="前言：互相关系数的一些points">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-30T01:33:17.989Z">
+<meta property="og:image" content="http://yoursite.com/2018/11/09/互相关系数/1.jpg">
+<meta property="og:updated_time" content="2018-11-09T01:02:12.690Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="matlab结构体">
-<meta name="twitter:description" content="前言： 再做语音的实验时候遇到一个问题 ：需要给结构体预分配内存，然后我看了下就发现 其实完全就是动态增长的。我发现就算有报错，依然可以运行出结果。">
+<meta name="twitter:title" content="互相关系数">
+<meta name="twitter:description" content="前言：互相关系数的一些points">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/09/互相关系数/1.jpg">
 
 
 
@@ -122,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/10/30/matlab结构体/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/09/互相关系数/">
 
 
 
 
 
-  <title>matlab结构体 | Sunny</title>
+  <title>互相关系数 | Sunny</title>
   
 
 
@@ -301,7 +303,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/30/matlab结构体/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/09/互相关系数/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ying Liu">
@@ -318,7 +320,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">matlab结构体</h1>
+          <h1 class="post-title" itemprop="name headline">互相关系数</h1>
         
 
         <div class="post-meta">
@@ -330,8 +332,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-30T09:24:49+08:00">
-                2018-10-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-09T08:53:32+08:00">
+                2018-11-09
               </time>
             
 
@@ -355,17 +357,6 @@
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
                   <a href="/categories/matlab/" itemprop="url" rel="index">
                     <span itemprop="name">matlab</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/matlab/实验/" itemprop="url" rel="index">
-                    <span itemprop="name">实验</span>
                   </a>
                 </span>
 
@@ -409,15 +400,10 @@
       
 
       
-        <p>﻿前言：</p>
-<p>再做语音的实验时候遇到一个问题 ：需要给结构体预分配内存，然后我看了下就发现 其实完全就是动态增长的。我发现就算有报错，依然可以运行出结果。</p>
+        <p>前言：互相关系数的一些points</p>
 <a id="more"></a>
-<h2 id="1-matlab结构体"><a href="#1-matlab结构体" class="headerlink" title="1.matlab结构体"></a>1.matlab结构体</h2><p><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/create-a-structure-array.html" target="_blank" rel="noopener">https://ww2.mathworks.cn/help/matlab/matlab_prog/create-a-structure-array.html</a><br><a href="https://ww2.mathworks.cn/help/matlab/ref/struct.html" target="_blank" rel="noopener">https://ww2.mathworks.cn/help/matlab/ref/struct.html</a></p>
-<h2 id="结构体的创建"><a href="#结构体的创建" class="headerlink" title="结构体的创建"></a>结构体的创建</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s.a = 1;</span><br><span class="line">s.b = &#123;&apos;A&apos;,&apos;B&apos;,&apos;C&apos;&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="结构体数组的创建"><a href="#结构体数组的创建" class="headerlink" title="结构体数组的创建"></a>结构体数组的创建</h2><p>采用都是动态创建，这个真服matlab,用的比较惯的是下面这种</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">patient.name = &apos;John Doe&apos;;</span><br><span class="line">patient.billing = 127.00;  %动态增加属性</span><br><span class="line">patient.test = [79, 75, 73; 180, 178, 177.5; 220, 210, 205];</span><br><span class="line">patient(2).name = &apos;John Doe_2&apos;;</span><br><span class="line">patient(2).billing = 127.00_2;  %动态增加维度</span><br><span class="line">patient(2).test2 = [79, 75, 73; 180, 178, 177.5; 220, 210, 205];</span><br><span class="line">patient  %输出</span><br></pre></td></tr></table></figure>
-<h2 id="2-元胞数组-cell"><a href="#2-元胞数组-cell" class="headerlink" title="2.元胞数组 cell"></a>2.元胞数组 cell</h2><p><a href="https://ww2.mathworks.cn/help/matlab/cell-arrays.html" target="_blank" rel="noopener">https://ww2.mathworks.cn/help/matlab/cell-arrays.html</a></p>
-<h2 id="3-矩阵和数组"><a href="#3-矩阵和数组" class="headerlink" title="3.矩阵和数组"></a>3.矩阵和数组</h2><p><a href="https://ww2.mathworks.cn/help/matlab/matrices-and-arrays.html" target="_blank" rel="noopener">https://ww2.mathworks.cn/help/matlab/matrices-and-arrays.html</a></p>
+<h3 id="用途："><a href="#用途：" class="headerlink" title="用途："></a>用途：</h3><p>(8 条消息)对两个信号做互相关的目的和结果是什么？ - 知乎: <a href="https://www.zhihu.com/question/29186714" target="_blank" rel="noopener">https://www.zhihu.com/question/29186714</a><br>许多实际问题都可以用相关函数来解决，如测距、噪声源的判别、管道漏点检测、液体流量计算、燃烧炉膛燃烧火焰检测等。<br>经典案例：<br><img src="/2018/11/09/互相关系数/1.jpg" width="500px"></p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现:"></a>实现:</h3><p>matlab 中已经有现成的代码了<br>Cross-correlation - MATLAB xcorr - MathWorks 中国: <a href="https://ww2.mathworks.cn/help/signal/ref/xcorr.html" target="_blank" rel="noopener">https://ww2.mathworks.cn/help/signal/ref/xcorr.html</a></p>
 
       
     </div>
@@ -446,9 +432,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/matlab结构体/" rel="tag"><i class="fa fa-tag"></i> matlab结构体</a>
-          
-            <a href="/tags/语音学实验/" rel="tag"><i class="fa fa-tag"></i> 语音学实验</a>
+            <a href="/tags/matlab/" rel="tag"><i class="fa fa-tag"></i> matlab</a>
           
         </div>
       
@@ -461,8 +445,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/29/python-install/" rel="next" title="python-install">
-                <i class="fa fa-chevron-left"></i> python-install
+              <a href="/2018/11/08/DBF/" rel="next" title="DBA">
+                <i class="fa fa-chevron-left"></i> DBA
               </a>
             
           </div>
@@ -470,10 +454,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/30/mfcc/" rel="prev" title="mfcc">
-                mfcc <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -619,7 +599,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-matlab结构体"><span class="nav-number">1.</span> <span class="nav-text">1.matlab结构体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结构体的创建"><span class="nav-number">2.</span> <span class="nav-text">结构体的创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结构体数组的创建"><span class="nav-number">3.</span> <span class="nav-text">结构体数组的创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-元胞数组-cell"><span class="nav-number">4.</span> <span class="nav-text">2.元胞数组 cell</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-矩阵和数组"><span class="nav-number">5.</span> <span class="nav-text">3.矩阵和数组</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#用途："><span class="nav-number">1.</span> <span class="nav-text">用途：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现"><span class="nav-number">2.</span> <span class="nav-text">实现:</span></a></li></ol></div>
             
 
           </div>
