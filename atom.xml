@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-09T01:02:12.690Z</updated>
+  <updated>2018-11-14T08:26:55.131Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>傅里叶变换</title>
+    <link href="http://yoursite.com/2018/11/14/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"/>
+    <id>http://yoursite.com/2018/11/14/傅里叶变换/</id>
+    <published>2018-11-14T08:26:55.000Z</published>
+    <updated>2018-11-14T08:26:55.131Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="matlab" scheme="http://yoursite.com/categories/matlab/"/>
+    
+      <category term="实验" scheme="http://yoursite.com/categories/matlab/%E5%AE%9E%E9%AA%8C/"/>
+    
+    
+      <category term="matlab" scheme="http://yoursite.com/tags/matlab/"/>
+    
+      <category term="实验" scheme="http://yoursite.com/tags/%E5%AE%9E%E9%AA%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>互相关系数</title>
@@ -101,7 +123,7 @@
     <link href="http://yoursite.com/2018/11/07/dtw%E7%AE%97%E6%B3%95/"/>
     <id>http://yoursite.com/2018/11/07/dtw算法/</id>
     <published>2018-11-07T08:31:41.000Z</published>
-    <updated>2018-11-09T01:13:28.659Z</updated>
+    <updated>2018-11-17T12:16:12.831Z</updated>
     
     <summary type="html">
     
@@ -424,26 +446,6 @@
     
     
       <category term="文档编辑" scheme="http://yoursite.com/tags/edit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/10/28/hello-world/"/>
-    <id>http://yoursite.com/2018/10/28/hello-world/</id>
-    <published>2018-10-27T16:09:49.387Z</published>
-    <updated>2018-10-29T06:50:58.287Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="测试" scheme="http://yoursite.com/categories/test/"/>
-    
-    
-      <category term="测试" scheme="http://yoursite.com/tags/test/"/>
     
   </entry>
   
