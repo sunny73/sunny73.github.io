@@ -1,0 +1,18 @@
+
+## install 
+git clone git@github.com:sunny73/sunny73.github.io.git myblog
+cd myblog
+npm install hexo
+npm install hexo-deployer-git -save
+​
+// hexo环境配置好后，继续像之前一样
+hexo new post_name
+
+## write and push md file
+git checkout source
+git commit & git push 
+
+## deploy
+hexo clean
+hexo g
+hexo d
