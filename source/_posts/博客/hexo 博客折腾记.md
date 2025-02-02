@@ -91,6 +91,7 @@ tags: # 标签
 ### next 主题优化：
 
 next官网地址：https://theme-next.js.org/docs/
+https://theme-next.js.org/docs/theme-settings/
 
 
 [<font style="color:#dca10d;">https://sspai.com/post/85116</font>](https://sspai.com/post/85116)
