@@ -90,6 +90,9 @@ tags: # 标签
 
 ### next 主题优化：
 
+next官网地址：https://theme-next.js.org/docs/
+
+
 [<font style="color:#dca10d;">https://sspai.com/post/85116</font>](https://sspai.com/post/85116)
 
 [<font style="color:#dca10d;">https://blog.mrzorg.top/Hexo/2020-02-12-hero-next-theme-settings/</font>](https://blog.mrzorg.top/Hexo/2020-02-12-hero-next-theme-settings/)<font style="color:#000000;">  </font><font style="color:#000000;">— 高阶设置</font>
@@ -124,12 +127,10 @@ https://yleave.github.io/2020/09/12/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%BD%
 
 
 ## 问题记录
-#### 如果 git submodule add 报错 'themes/next' already exists in the index
+#### 如果next提交不了
+删除 next下面的.git文件夹，然后重新add
 
+#### 如果 git submodule add 报错 'themes/next' already exists in the index
 ```
 git rm -r --cached themes/next
-rm -rf themes/next
-git submodule add https://github.com/theme-next/hexo-theme-next.git themes/next
-git submodule update --init --recursive
-
 ```
