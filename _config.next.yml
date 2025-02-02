@@ -181,8 +181,8 @@ links_settings:
   # Available values: block | inline
   layout: block
 
-links:
-  Title: https://example.com
+# links:
+#   Title: https://example.com
 
 # Table of Contents in the Sidebar
 # Front-matter variable (nonsupport wrap expand_all).
