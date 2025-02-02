@@ -83,7 +83,7 @@ open_graph:
     #twitter_site: <twitter:site>
     #twitter_image: <twitter:image>
     #google_plus: <g+:profile_link>
-    #fb_admins: <fb:admin_id>
+    #fb_admins: <fb:admin_id> 
     #fb_app_id: <fb:app_id>
 
 
@@ -379,6 +379,9 @@ codeblock:
     show_result: true
     # Available values: default | flat | mac
     style: mac
+
+
+
 
 back2top:
   enable: true
