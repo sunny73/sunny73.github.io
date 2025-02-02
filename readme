@@ -16,3 +16,7 @@ git commit & git push
 hexo clean
 hexo g
 hexo d
+
+## website url
+source with netify:https://storied-fudge-4e5ba7.netlify.app/
+master with gitpage: https://sunny73.github.io/
