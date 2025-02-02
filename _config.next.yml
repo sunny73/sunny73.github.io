@@ -51,8 +51,8 @@ darkmode: true
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
+  small: /images/favicon.svg
+  medium: /images/favicon.svg
   apple_touch_icon: /images/apple-touch-icon-next.png
   safari_pinned_tab: /images/logo.svg
   #android_manifest: /manifest.json
@@ -923,3 +923,41 @@ vendors:
 css: css
 js: js
 images: images
+
+
+needmoreshare2:
+  enable: true
+  postbottom:
+    enable: true
+    options:
+      iconStyle: default
+      boxForm: horizontal
+      #位置
+      position: bottomCenter
+      #可分享网站
+      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+  float:
+    enable: true
+    options:
+      iconStyle: default
+      boxForm: vertical
+      #位置
+      position: topRight
+       #可分享网站
+      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+
+
+post_wordcount:
+  item_text: true
+  wordcount: true #单篇文章字数
+  min2read: true #单篇阅读时长
+  totalcount: true #站点总字数
+  separated_meta: true
+
+
+symbols_count_time:
+  separated_meta: true  # 是否换行显示 字数统计 及 阅读时长
+  item_text_post: true  # 文章 字数统计 阅读时长 使用图标 还是 文本表示
+  item_text_total: true # 博客底部统计 字数统计 阅读时长 使用图标 还是 文本表示
+  awl: 4
+  wpm: 275
