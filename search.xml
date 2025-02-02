@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>hexo 博客折腾记</title>
+    <url>/2025/02/02/%E5%8D%9A%E5%AE%A2/hexo%20%E5%8D%9A%E5%AE%A2%E6%8A%98%E8%85%BE%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="为什么写博客"><a href="#为什么写博客" class="headerlink" title="为什么写博客"></a>为什么写博客</h2><p>1、功能<br>放点自己常用的网站<br>相册<br>工具网站<br>随笔：自己的一些思考<br>放一些自己的作品集<br>作为一个导航网站</p>
+<p>2、体验网络建站的玩法<br>部署<br>网站托管<br>自动发布<br>域名啥的</p>
+<h2 id="静态博客和动态博客"><a href="#静态博客和动态博客" class="headerlink" title="静态博客和动态博客"></a>静态博客和动态博客</h2><p>静态博客：hexo<br>动态博客：</p>
+<h2 id="关于博客的一些技术栈"><a href="#关于博客的一些技术栈" class="headerlink" title="关于博客的一些技术栈"></a>关于博客的一些技术栈</h2><ul>
+<li>cdn加速<br><a href="https://blog.cuijiacai.com/blog-building/">https://blog.cuijiacai.com/blog-building/</a>  —hexo + netfily + 域名 + cloudflare（cdn加速）</li>
+<li>github pages 网站托管平台</li>
+</ul>
+<p>是一个静态网页托管网站，必须先生成静态网站的文件 才能托管<br>GitPage 是 GitHub Pages 的简称，是 GitHub 提供的一项静态网站托管服务。它允许用户将仓库中的 HTML、CSS、JavaScript 等文件直接部署为网站，通常用于展示项目文档、个人博客或项目主页。</p>
+<ul>
+<li>静态网站生成器</li>
+</ul>
+<p>除了 Jekyll，还有其他静态网站生成器可以搭建博客：<br>Hugo：用 Go 编写，速度快<br>Hexo：用 Node.js 编写，适合前端开发者<br>常用的静态网站生成器有：<br>Jekyll（适合博客、文档<br>Hugo（速度快，适合大型网站）<br>Hexo（基于 Node.js，适合前端开发者）<br>Gatsby（基于 React，适合现代化网站）<br>VuePress（适合文档类网站）</p>
+<ul>
+<li>git action 了解下</li>
+</ul>
+<p>最终我的部署方案是源Markdown文件提交到 GitHub ，利用 Github Actions 功能编写一个自动部署脚本。当master分支有内容提交时，触发脚本</p>
+<h2 id="hexo-博客的一些缺点"><a href="#hexo-博客的一些缺点" class="headerlink" title="hexo 博客的一些缺点"></a>hexo 博客的一些缺点</h2><p>1、文章可以分目录存放，但文章分类需要在文章中使用下面这种方式设置，不能设置使用目录树的方式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 随笔一则 # 标题</span><br><span class="line">date: 2019/3/26 hh:mm:ss # 时间</span><br><span class="line">categories: # 分类</span><br><span class="line">    - test1  # 只能由一个</span><br><span class="line">tags: # 标签</span><br><span class="line">    - testTag  # 能有多个</span><br><span class="line">    - TagGame  # 一个标签一行</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>2、不能在线编辑，需要在电脑上编辑之后使用hexo生成静态网站之后才能显示在网页上</p>
+<h2 id="hexo-博客的搭建步骤"><a href="#hexo-博客的搭建步骤" class="headerlink" title="hexo 博客的搭建步骤"></a>hexo 博客的搭建步骤</h2><p>hexo博客搭建：</p>
+<p><a href="https://developer.aliyun.com/article/1218122"><font style="color:#dca10d;">https://developer.aliyun.com/article/1218122</font></a><font style="color:#000000;">  — 使用Hexo从0到1搭建个人博客详细教程（超详细，超简单）</font></p>
+<p><a href="https://www.yangbing.fun/2019/06/29/save-hexo-source-post-with-git-branch/"><font style="color:#dca10d;">https://www.yangbing.fun/2019/06/29/save-hexo-source-post-with-git-branch/</font></a><font style="color:#000000;"> —使用git分支保存hexo博客源码到github</font></p>
+<p><a href="https://juejin.cn/post/6844904020306296845"><font style="color:#dca10d;">https://juejin.cn/post/6844904020306296845</font></a><font style="color:#000000;">  </font><font style="color:#000000;">一键备份</font></p>
+<p>主题优化：</p>
+<p><a href="https://sspai.com/post/85116"><font style="color:#dca10d;">https://sspai.com/post/85116</font></a></p>
+<p><a href="https://blog.mrzorg.top/Hexo/2020-02-12-hero-next-theme-settings/"><font style="color:#dca10d;">https://blog.mrzorg.top/Hexo/2020-02-12-hero-next-theme-settings/</font></a><font style="color:#000000;">  </font><font style="color:#000000;">— 高阶设置</font></p>
+<p><a href="https://blog.csdn.net/mqdxiaoxiao/article/details/93644533"><font style="color:#dca10d;">https://blog.csdn.net/mqdxiaoxiao/article/details/93644533</font></a><font style="color:#000000;"> —分类</font><font style="color:#000000;">	</font></p>
+<h2 id="hexo优秀实例"><a href="#hexo优秀实例" class="headerlink" title="hexo优秀实例"></a>hexo优秀实例</h2><p>这个博主的博客页面非常好看：<br><a href="https://shoka.lostyu.me/about/#678288218101ac2f442684d0">https://shoka.lostyu.me/about/#678288218101ac2f442684d0</a></p>
+<p>这个博主的内容非常丰富：<br><a href="https://rawchen.com/music">https://rawchen.com/music</a><br><a href="https://pan.rawchen.com/">https://pan.rawchen.com/</a>  - 他还有云盘</p>
+<p>好看的hexo主题推荐<br><a href="https://juejin.cn/post/7053744641383874574">https://juejin.cn/post/7053744641383874574</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>个人博客</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+</search>
