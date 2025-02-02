@@ -37,13 +37,13 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+# scheme: Muse
 #scheme: Mist
-#scheme: Pisces
+scheme: Pisces
 #scheme: Gemini
 
 # Dark Mode
-darkmode: false
+darkmode: true
 
 
 # ---------------------------------------------------------------
@@ -157,9 +157,11 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  #GitHub: https://github.com/yourname || fab fa-github
-  #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
-  #Weibo: https://weibo.com/yourname || fab fa-weibo
+  GitHub: https://github.com/yourname || fab fa-github
+  E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+  Weibo: https://weibo.com/yourname || fab fa-weibo
+  Bilibili: https://space.bilibili.com/2106669000 || fab fa-youtube
+
   #Twitter: https://twitter.com/yourname || fab fa-twitter
   #FB Page: https://www.facebook.com/yourname || fab fa-facebook
   #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
@@ -179,7 +181,7 @@ links_settings:
   layout: block
 
 links:
-  #Title: https://example.com
+  Title: https://example.com
 
 # Table of Contents in the Sidebar
 # Front-matter variable (nonsupport wrap expand_all).
@@ -273,7 +275,7 @@ reward_settings:
   animation: false
 
 reward:
-  #wechatpay: /images/wechatpay.png
+  wechatpay: /images/wechatpay.png
   #alipay: /images/alipay.png
   #paypal: /images/paypal.png
   #bitcoin: /images/bitcoin.png
@@ -361,24 +363,19 @@ body_scrollbar:
   # Reserving space for the scrollbar gutter even if the content is not overflowing.
   stable: false
 
+
 codeblock:
   # Code Highlight theme
-  # All available themes: https://theme-next.js.org/highlight/
-  theme:
-    light: default
-    dark: stackoverflow-dark
-  prism:
-    light: prism
-    dark: prism-dark
+  # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
+  # See: https://github.com/chriskempson/tomorrow-theme
+  highlight_theme: night bright
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
+    # Show text copy result.
+    show_result: true
     # Available values: default | flat | mac
-    style:
-  # Fold code block
-  fold:
-    enable: false
-    height: 500
+    style: mac
 
 back2top:
   enable: true
@@ -400,7 +397,7 @@ reading_progress:
 
 # Bookmark Support
 bookmark:
-  enable: false
+  enable: true
   # Customize the color of the bookmark.
   color: "#222"
   # If auto, save the reading progress when closing the page or clicking the bookmark-icon.
