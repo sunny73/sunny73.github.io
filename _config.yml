@@ -50,3 +50,13 @@ live2d:
     height: 300
   mobile:
     show: true
+
+
+highlight:
+  enable: true #是否开启代码高亮
+  line_number: true #是否增加代码行号
+  auto_detect: true #自动判断代码语言
+  tab_replace: ""
+  wrap: true
+  hljs: false
+
