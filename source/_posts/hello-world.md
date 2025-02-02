@@ -1,6 +1,13 @@
 ---
-title: Hello World
+title: Hello World # 标题
+date: 2019/3/26 hh:mm:ss # 时间
+categories: # 分类
+	- test  # 只能由一个
+tags: # 标签
+	- testTag  # 能有多个
+	- TagGame  # 一个标签一行
 ---
+
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
 ## Quick Start

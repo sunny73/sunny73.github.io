@@ -1,6 +1,9 @@
 ---
-title: My New Post
-date: 2025-02-01 22:16:04
-tags:
+title: My-New-Post # 标题
+date: 2019/3/26 hh:mm:ss # 时间
+categories: # 分类
+	- test  # 只能由一个
+tags: # 标签
+	- testTag  # 能有多个
+	- TagGame  # 一个标签一行
 ---
-
