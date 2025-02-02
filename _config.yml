@@ -3,4 +3,14 @@ deploy:
   repo: git@github.com:sunny73/sunny73.github.io.git
   branch: master
 
-h
+theme: next
+
+
+# site
+title: YingLiu's blog
+subtitle: YingLiu
+description: 自由飞
+keywords:
+author: liuying 
+language: en
+timezone: ''
